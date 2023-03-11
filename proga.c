@@ -3,13 +3,13 @@
 using namespace std;
 
 bool polydrome(int number){
-    int polydrom=0;
-    int num=number;
-    while(num!=0){
-        polydrom=polydrom*10+num%10;
-        num/=10;
+    int polydrom = 0;
+    int num = number;
+    while(num != 0){
+        polydrom = polydrom*10 + num%10;
+        num /= 10;
     }
-    if (number!=polydrom){
+    if (number != polydrom){
         return false;
     }
     return true;
@@ -18,13 +18,13 @@ bool polydrome(int number){
 int main(){
     FILE* f;
     f=fopen("polydrom.txt","a");
-    int a;
-    cin>>a;
-    if (polydrome(a)){
-        fprintf(f,"%d is polydrom \n",a,a);
+    int number;
+    cin >> number;
+    if (polydrome(number)){
+        fprintf(f,"%d is polydrom \n",number);
     }
     else{
-        fprintf(f,"%d is not polydrom \n",a,a);
+        fprintf(f,"%d is not polydrom \n",number);
     }
     fflush(f);
     fclose(f);
