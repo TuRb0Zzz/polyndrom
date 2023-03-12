@@ -15,11 +15,11 @@ bool polydrome(int number){
     return true;
 }
 
-int main(){
+int main(int argc, char** argv){
     FILE* f;
     f=fopen("polydrom.txt","a");
     int number;
-    cin >> number;
+    cin >> number; -- так работать не должно... на вход в аргументы программы передаётся имя файла и вы записываете результат обработки файла в другой
     if (polydrome(number)){
         fprintf(f,"%d is polydrom \n",number);
     }
