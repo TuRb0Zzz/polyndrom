@@ -3,6 +3,9 @@
 using namespace std;
 
 bool polydrome(int number){
+    if(number < 0){
+        return false;
+    }
     int polydrom = 0;
     int num = number;
     while(num != 0){
@@ -15,18 +18,23 @@ bool polydrome(int number){
     return true;
 }
 
-int main(){
+int main(int argc, char** argv){
     FILE* f;
-    f=fopen("polydrom.txt","a");
+    FILE* r;
+    r=fopen(argv[1],"r");
+    f=fopen("polydrome.txt","a");
     int number;
-    cin >> number;
+    while(!feof(r)){
+        fscanf(r,"%d ",&number);
     if (polydrome(number)){
         fprintf(f,"%d is polydrom \n",number);
     }
     else{
         fprintf(f,"%d is not polydrom \n",number);
     }
+    }
     fflush(f);
     fclose(f);
+    fclose(r);
     return 0;
 }
