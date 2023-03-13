@@ -1,0 +1,10 @@
+-1234
+151
+-151
+09999990
+0987890
+-1234 is not polydrom 
+151 is polydrom 
+-151 is not polydrom 
+9999990 is not polydrom 
+987890 is not polydrom 
