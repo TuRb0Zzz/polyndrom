@@ -19,15 +19,11 @@ bool polydrome(int number){
 }
 
 int main(int argc, char** argv){
-	всегда надо проверять критические условия....
-		а что будет если кто-то забыл передать файл??
-	поэтому
 	if (argc == 1) {
 		std::cout << "please give me file!!!" << std::endl;
 		return 1;
 	}
 
-	а что будет если такого файла нет?
 	if (!FileExists(argv[1])) {
 		return 1;
 	}
